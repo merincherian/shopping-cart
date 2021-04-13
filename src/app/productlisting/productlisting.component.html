@@ -1,0 +1,15 @@
+<app-product-search></app-product-search> 
+
+<div class="row mt-4"> 
+    <div class="col-4 mt-4" *ngFor="let product of products"> 
+      <div class="card"> 
+        <img [src]="product.imageUrl" class="card-img-top" alt="Simple product"> 
+        <div class="card-body"> 
+          <h5 class="card-title">{{product.title}}</h5> 
+          <p class="card-text">{{product.description}}</p> 
+          <button type="button" class="btn btn-danger" (click)="delete_product(product.id)">Delete product</button>
+          <a [routerLink]="['/product',product.id]" class="btn btn-primary ml-2">View Details</a> 
+        </div> 
+      </div> 
+    </div>  
+  </div>
