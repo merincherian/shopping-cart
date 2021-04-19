@@ -25,9 +25,10 @@ export class ProductService {
     return this.http.post(this.baseUrl+'product/', product);
   }
 
-  delete_product(id)
+ delete_product(id)
   {
-    return this.http.delete(this.baseUrl+'product/'+id);
+    console.log(this.baseUrl+'product/'+id);
+    return this.http.delete(this.baseUrl+'product/'+id).toPromise();
   }
     
 }

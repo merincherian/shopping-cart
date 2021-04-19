@@ -33,7 +33,8 @@ export class AddToCartComponent implements OnInit {
       }
     );
 
-    this.router.navigate(['']);
+    alert("Data has been succesfully entered");
+    this.router.navigate(['./product']);
   }
 
 }

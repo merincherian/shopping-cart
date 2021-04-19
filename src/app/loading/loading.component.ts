@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, Input } from '@angular/core';
 
 @Component({
   selector: 'app-loading',
@@ -6,6 +6,10 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
   styleUrls: ['./loading.component.scss']
 })
 export class LoadingComponent implements OnInit, OnDestroy {
+
+  //load_value: boolean;
+
+  @Input() child_load;
 
   constructor() { }
 
@@ -16,6 +20,11 @@ export class LoadingComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(){
 
+  }
+
+  stop_loading()
+  {
+    //this.load_value = false;
   }
 
 }

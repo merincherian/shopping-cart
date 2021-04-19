@@ -1,5 +1,8 @@
 <app-product-search></app-product-search> 
 
+
+<app-loading [child_load]="parent_load"></app-loading> <!--Passing the parent_load value as a value from parent to child -->
+
 <div class="row mt-4"> 
     <div class="col-4 mt-4" *ngFor="let product of products"> 
       <div class="card"> 
